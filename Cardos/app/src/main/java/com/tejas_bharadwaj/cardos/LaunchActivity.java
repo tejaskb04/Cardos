@@ -1,5 +1,6 @@
 package com.tejas_bharadwaj.cardos;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,5 +16,8 @@ public class LaunchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_launch);
         launchLayout = (LinearLayout) findViewById(R.id.launch_layout);
         launchLayout.setBackgroundColor(Color.parseColor("#194D1E"));
+        // TESTING CODE START
+        startActivity(new Intent(LaunchActivity.this, RegisterActivity.class));
+        // TESTING CODE END
     }
 }

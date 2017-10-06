@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "656185046286",
+    "firebase_url": "https://cardos-d3ae9.firebaseio.com",
+    "project_id": "cardos-d3ae9",
+    "storage_bucket": "cardos-d3ae9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656185046286:android:16f614ef2ae82f9a",
+        "android_client_info": {
+          "package_name": "com.tejas_bharadwaj.cardos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656185046286-gptstvt43kepbvttgcegqvqoq6556dqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEjaX8oE-5mOqhlvrbDbqgkzhIpzoKB1c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
