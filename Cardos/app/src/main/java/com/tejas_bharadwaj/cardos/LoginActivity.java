@@ -55,8 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
             Toast.makeText(LoginActivity.this, "There are one or more empty fields.",
                     Toast.LENGTH_SHORT).show();
-        }
-        else {
+        } else {
             progressDialog.setMessage("Logging In...");
             progressDialog.show();
             firebaseAuth.signInWithEmailAndPassword(email, password)

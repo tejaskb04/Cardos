@@ -61,8 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
             Toast.makeText(RegisterActivity.this, "There are one or more empty fields.",
                     Toast.LENGTH_SHORT).show();
-        }
-        else {
+        } else {
             progressDialog.setMessage("Registering User...");
             progressDialog.show();
             firebaseAuth.createUserWithEmailAndPassword(email, password)
