@@ -18,6 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
+
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
     private Button loginBtn;

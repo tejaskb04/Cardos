@@ -25,7 +25,7 @@ public class DashboardActivity extends FragmentActivity implements OnMapReadyCal
     private final int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 100;
     private GoogleMap map;
     private FusedLocationProviderClient fusedLocationProviderClient;
-    private boolean locationPermissionGranted = false;
+    private boolean locationPermissionGranted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class DashboardActivity extends FragmentActivity implements OnMapReadyCal
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(DashboardActivity.this);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(DashboardActivity.this);
+        locationPermissionGranted = false;
     }
 
     private void getLocationPermission() {

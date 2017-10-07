@@ -1,2 +1,4 @@
 TODO:
 1. Fix UI
+2. Implement “Check if User is Logged in” Logic
+3. Include buttons in LaunchActivity to manually route to DashboardActivity and RegisterActivity
