@@ -7,6 +7,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -64,6 +65,7 @@ public class DashboardActivity extends FragmentActivity implements OnMapReadyCal
         map = googleMap;
         map.getUiSettings().setMapToolbarEnabled(false);
         updateLocationUI();
+        getDeviceLocation();
     }
 
     private void updateLocationUI() {
@@ -80,7 +82,6 @@ public class DashboardActivity extends FragmentActivity implements OnMapReadyCal
                 getLocationPermission();
             }
         } catch (SecurityException e)  {
-            // Show Error Message
             e.printStackTrace();
         }
     }
@@ -94,14 +95,18 @@ public class DashboardActivity extends FragmentActivity implements OnMapReadyCal
                     public void onComplete(@NonNull Task task) {
                         if (task.isSuccessful()) {
                             Location userLocation = (Location) task.getResult();
+                            map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(userLocation.getLatitude(),
+                                    userLocation.getLongitude()), 13));
+                        } else {
+                            Toast.makeText(DashboardActivity.this, "Current location is null",
+                                    Toast.LENGTH_SHORT).show();
+                            map.getUiSettings().setMyLocationButtonEnabled(false);
                         }
                     }
                 });
             }
         } catch (SecurityException e) {
-            // Show Error Message
             e.printStackTrace();
         }
-
     }
 }
